@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.3 Past Performance - GovProcure RFP Portal</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body data-page-id="past-performance" data-depth="2">
+
+  <header class="header">
+    <div class="header-left">
+      <a href="../../index.html" class="header-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        GovProcure
+      </a>
+      <div class="header-divider"></div>
+      <div class="header-rfp-info">
+        <span class="header-rfp-number">RFP-2026-0042</span>
+        <span class="status-badge status-badge--draft"><span class="status-badge-dot"></span>Draft</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">RFP Sections</div>
+      <nav class="sidebar-nav" id="sidebar-nav"></nav>
+      <div class="sidebar-footer">
+        <strong>Submission Deadline</strong>
+        <div class="sidebar-deadline">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
+          <span>March 31, 2026 — 5:00 PM EST</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="breadcrumbs" id="breadcrumbs"></div>
+      <div class="progress-bar" id="progress-bar"></div>
+
+      <div class="page-header">
+        <h1>1.3 Past Performance</h1>
+        <p>Describe relevant prior contracts and engagements that demonstrate your capability to deliver on this RFP.</p>
+      </div>
+
+      <form id="page-form" novalidate>
+        <!-- Q1: Reference Contract 1 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.3.1</span>
+            <span class="question-title">Reference Contract #1</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Provide details for your most relevant past contract. This should closely align with the scope of this RFP.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="ref1-title">Contract Title</label>
+              <input type="text" id="ref1-title" name="ref1_title" class="form-input" placeholder="e.g., Cloud Migration Services for DHS" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ref1-agency">Client / Agency</label>
+              <input type="text" id="ref1-agency" name="ref1_agency" class="form-input" placeholder="e.g., Department of Homeland Security" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="ref1-start">Start Date</label>
+              <input type="date" id="ref1-start" name="ref1_start" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ref1-end">End Date</label>
+              <input type="date" id="ref1-end" name="ref1_end" class="form-input" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ref1-value">Contract Value (USD)</label>
+            <input type="text" id="ref1-value" name="ref1_value" class="form-input" placeholder="$0.00">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ref1-description">Scope of Work</label>
+            <textarea id="ref1-description" name="ref1_description" class="form-textarea" rows="4" placeholder="Describe the scope, deliverables, and outcomes of this contract..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ref1-contact-email">Client Reference Email</label>
+            <input type="email" id="ref1-contact-email" name="ref1_contact_email" class="form-input" placeholder="reference@agency.gov" required>
+          </div>
+        </div>
+
+        <!-- Q2: Reference Contract 2 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.3.2</span>
+            <span class="question-title">Reference Contract #2</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Provide a second reference contract demonstrating relevant experience.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="ref2-title">Contract Title</label>
+              <input type="text" id="ref2-title" name="ref2_title" class="form-input" placeholder="Contract title" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ref2-agency">Client / Agency</label>
+              <input type="text" id="ref2-agency" name="ref2_agency" class="form-input" placeholder="Client organization" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="ref2-start">Start Date</label>
+              <input type="date" id="ref2-start" name="ref2_start" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ref2-end">End Date</label>
+              <input type="date" id="ref2-end" name="ref2_end" class="form-input">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ref2-description">Scope of Work</label>
+            <textarea id="ref2-description" name="ref2_description" class="form-textarea" rows="4" placeholder="Describe the scope, deliverables, and outcomes..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ref2-contact-email">Client Reference Email</label>
+            <input type="email" id="ref2-contact-email" name="ref2_contact_email" class="form-input" placeholder="reference@client.com" required>
+          </div>
+        </div>
+
+        <!-- Q3: Optional Third Reference -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.3.3</span>
+            <span class="question-title">Additional Reference (Optional)</span>
+          </div>
+          <p class="question-help">Would you like to provide a third reference contract?</p>
+          <div class="form-group">
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="has_third_ref" value="yes"
+                  data-conditional-trigger="show" data-conditional-target="third-ref-section">
+                Yes, I'd like to add another reference
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="has_third_ref" value="no" checked>
+                No, two references are sufficient
+              </label>
+            </div>
+          </div>
+          <div class="conditional-section" id="third-ref-section" data-conditional-group="has_third_ref">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="ref3-title">Contract Title</label>
+                <input type="text" id="ref3-title" name="ref3_title" class="form-input" placeholder="Contract title">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ref3-agency">Client / Agency</label>
+                <input type="text" id="ref3-agency" name="ref3_agency" class="form-input" placeholder="Client organization">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ref3-description">Scope of Work</label>
+              <textarea id="ref3-description" name="ref3_description" class="form-textarea" rows="3" placeholder="Brief description of scope and outcomes..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ref3-contact-email">Client Reference Email</label>
+              <input type="email" id="ref3-contact-email" name="ref3_contact_email" class="form-input" placeholder="reference@client.com">
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4: Performance Summary -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.3.4</span>
+            <span class="question-title">Performance Track Record Summary</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Summarize your organization's overall performance track record, including on-time delivery rates, customer satisfaction metrics, and any performance awards received.</p>
+          <div class="form-group">
+            <label class="form-label" for="perf-summary">Performance Summary</label>
+            <textarea id="perf-summary" name="perf_summary" class="form-textarea" rows="6" placeholder="Describe your track record including delivery success rates, CPARS ratings, customer satisfaction scores, and relevant awards or recognitions..." required maxlength="3000" data-maxlength-counter="perf-counter"></textarea>
+            <div class="char-counter" id="perf-counter">0 / 3000 characters</div>
+          </div>
+        </div>
+
+        <!-- Q5: Subcontracting -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.3.5</span>
+            <span class="question-title">Subcontracting History</span>
+          </div>
+          <p class="question-help">Have you utilized subcontractors on past relevant contracts? If so, describe the scope and management approach.</p>
+          <div class="form-group">
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="subcontracting" value="yes"
+                  data-conditional-trigger="show" data-conditional-target="subcontracting-section">
+                Yes — Subcontractors were utilized
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="subcontracting" value="no">
+                No — All work was performed in-house
+              </label>
+            </div>
+          </div>
+          <div class="conditional-section" id="subcontracting-section" data-conditional-group="subcontracting">
+            <div class="form-group">
+              <label class="form-label" for="subcontract-details">Subcontracting Details</label>
+              <textarea id="subcontract-details" name="subcontract_details" class="form-textarea" rows="4" placeholder="Describe which portions of work were subcontracted, how subcontractors were managed, and quality control measures..."></textarea>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <div class="action-bar">
+    <div class="action-bar-left">
+      <button class="btn btn-secondary" id="btn-save-draft">Save Draft</button>
+    </div>
+    <div class="action-bar-right">
+      <a class="btn btn-secondary" id="btn-prev">Previous</a>
+      <a class="btn btn-primary" id="btn-next">Save &amp; Continue</a>
+    </div>
+  </div>
+
+  <script src="../../js/navigation.js"></script>
+  <script src="../../js/shared.js"></script>
+</body>
+</html>

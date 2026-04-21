@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.2.2 Financial Stability - GovProcure RFP Portal</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body data-page-id="financial-stability" data-depth="2">
+
+  <header class="header">
+    <div class="header-left">
+      <a href="../../index.html" class="header-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        GovProcure
+      </a>
+      <div class="header-divider"></div>
+      <div class="header-rfp-info">
+        <span class="header-rfp-number">RFP-2026-0042</span>
+        <span class="status-badge status-badge--draft"><span class="status-badge-dot"></span>Draft</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">RFP Sections</div>
+      <nav class="sidebar-nav" id="sidebar-nav"></nav>
+      <div class="sidebar-footer">
+        <strong>Submission Deadline</strong>
+        <div class="sidebar-deadline">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
+          <span>March 31, 2026 — 5:00 PM EST</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="breadcrumbs" id="breadcrumbs"></div>
+      <div class="progress-bar" id="progress-bar"></div>
+
+      <div class="page-header">
+        <h1>1.2.2 Financial Stability</h1>
+        <p>Demonstrate your organization's financial health and ability to sustain contract performance.</p>
+      </div>
+
+      <form id="page-form" novalidate>
+        <!-- Q1: Credit Rating -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.2.2.1</span>
+            <span class="question-title">Credit Rating</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Select your organization's current credit rating from a recognized agency.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="credit-agency">Rating Agency</label>
+              <select id="credit-agency" name="credit_agency" class="form-select" required>
+                <option value="">Select agency...</option>
+                <option value="sp">Standard & Poor's (S&P)</option>
+                <option value="moodys">Moody's</option>
+                <option value="fitch">Fitch Ratings</option>
+                <option value="dnb">Dun & Bradstreet</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="credit-rating">Rating</label>
+              <select id="credit-rating" name="credit_rating" class="form-select" required>
+                <option value="">Select rating...</option>
+                <option value="aaa">AAA / Aaa</option>
+                <option value="aa">AA / Aa</option>
+                <option value="a">A</option>
+                <option value="bbb">BBB / Baa</option>
+                <option value="bb">BB / Ba</option>
+                <option value="b">B</option>
+                <option value="below-b">Below B</option>
+                <option value="not-rated">Not Rated</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2: Insurance -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.2.2.2</span>
+            <span class="question-title">Insurance Coverage</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Does your organization maintain the minimum insurance coverage required (General Liability: $1M, Professional Liability: $2M, Cyber Liability: $5M)?</p>
+          <div class="form-group">
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="insurance_coverage" value="yes" required
+                  data-conditional-trigger="show" data-conditional-target="insurance-details">
+                Yes — We meet or exceed all minimum coverage requirements
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="insurance_coverage" value="partial"
+                  data-conditional-trigger="show" data-conditional-target="insurance-gap-section">
+                Partial — We meet some but not all requirements
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="insurance_coverage" value="no"
+                  data-conditional-trigger="show" data-conditional-target="insurance-gap-section">
+                No — We are obtaining additional coverage
+              </label>
+            </div>
+          </div>
+          <div class="conditional-section" id="insurance-details" data-conditional-group="insurance_coverage">
+            <div class="form-group">
+              <label class="form-label" for="insurance-provider">Insurance Provider</label>
+              <input type="text" id="insurance-provider" name="insurance_provider" class="form-input" placeholder="e.g., Hartford Financial Services">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="insurance-policy">Policy Number</label>
+              <input type="text" id="insurance-policy" name="insurance_policy" class="form-input" placeholder="e.g., POL-2025-XXXXXX">
+            </div>
+          </div>
+          <div class="conditional-section" id="insurance-gap-section" data-conditional-group="insurance_coverage">
+            <div class="form-group">
+              <label class="form-label" for="insurance-gap-plan">Gap Remediation Plan</label>
+              <textarea id="insurance-gap-plan" name="insurance_gap_plan" class="form-textarea" rows="3" placeholder="Describe your plan to obtain required coverage levels..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3: Bankruptcy History -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.2.2.3</span>
+            <span class="question-title">Bankruptcy & Litigation History</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Has your organization filed for bankruptcy or been subject to material litigation in the past 10 years?</p>
+          <div class="form-group">
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="bankruptcy_history" value="none" required>
+                No bankruptcy filings or material litigation
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="bankruptcy_history" value="resolved"
+                  data-conditional-trigger="show" data-conditional-target="bankruptcy-detail-section">
+                Yes, but all matters are resolved
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="bankruptcy_history" value="pending"
+                  data-conditional-trigger="show" data-conditional-target="bankruptcy-detail-section">
+                Yes, with pending matters
+              </label>
+            </div>
+          </div>
+          <div class="conditional-section" id="bankruptcy-detail-section" data-conditional-group="bankruptcy_history">
+            <div class="form-group">
+              <label class="form-label" for="bankruptcy-details">Provide Details</label>
+              <textarea id="bankruptcy-details" name="bankruptcy_details" class="form-textarea" rows="4" placeholder="Describe the nature and current status of any bankruptcy filings or litigation..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4: DUNS Number -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.2.2.4</span>
+            <span class="question-title">DUNS Number</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Provide your 9-digit Data Universal Numbering System (DUNS) number.</p>
+          <div class="form-group">
+            <label class="form-label" for="duns-number">DUNS Number</label>
+            <input type="text" id="duns-number" name="duns_number" class="form-input" placeholder="XX-XXX-XXXX" required maxlength="11">
+            <p class="input-mask-hint">Format: XX-XXX-XXXX (9 digits)</p>
+          </div>
+        </div>
+
+        <!-- Q5: Banking Reference -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.2.2.5</span>
+            <span class="question-title">Banking Reference</span>
+          </div>
+          <p class="question-help">Provide a banking reference to verify your organization's financial standing.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="bank-name">Bank Name</label>
+              <input type="text" id="bank-name" name="bank_name" class="form-input" placeholder="e.g., JPMorgan Chase">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bank-contact">Bank Contact Name</label>
+              <input type="text" id="bank-contact" name="bank_contact" class="form-input" placeholder="Relationship Manager name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bank-phone">Bank Contact Phone</label>
+            <input type="tel" id="bank-phone" name="bank_phone" class="form-input" placeholder="(555) 123-4567">
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <div class="action-bar">
+    <div class="action-bar-left">
+      <button class="btn btn-secondary" id="btn-save-draft">Save Draft</button>
+    </div>
+    <div class="action-bar-right">
+      <a class="btn btn-secondary" id="btn-prev">Previous</a>
+      <a class="btn btn-primary" id="btn-next">Save &amp; Continue</a>
+    </div>
+  </div>
+
+  <script src="../../js/navigation.js"></script>
+  <script src="../../js/shared.js"></script>
+  <script>
+    // DUNS mask: XX-XXX-XXXX
+    document.getElementById('duns-number').addEventListener('input', function() {
+      let val = this.value.replace(/[^0-9]/g, '').slice(0, 9);
+      if (val.length > 5) val = val.slice(0,2) + '-' + val.slice(2,5) + '-' + val.slice(5);
+      else if (val.length > 2) val = val.slice(0,2) + '-' + val.slice(2);
+      this.value = val;
+    });
+  </script>
+</body>
+</html>

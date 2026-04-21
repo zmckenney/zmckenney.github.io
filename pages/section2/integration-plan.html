@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.1.2 Integration Plan - GovProcure RFP Portal</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body data-page-id="integration-plan" data-depth="2">
+
+  <header class="header">
+    <div class="header-left">
+      <a href="../../index.html" class="header-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        GovProcure
+      </a>
+      <div class="header-divider"></div>
+      <div class="header-rfp-info">
+        <span class="header-rfp-number">RFP-2026-0042</span>
+        <span class="status-badge status-badge--draft"><span class="status-badge-dot"></span>Draft</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">RFP Sections</div>
+      <nav class="sidebar-nav" id="sidebar-nav"></nav>
+      <div class="sidebar-footer">
+        <strong>Submission Deadline</strong>
+        <div class="sidebar-deadline">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
+          <span>March 31, 2026 — 5:00 PM EST</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="breadcrumbs" id="breadcrumbs"></div>
+      <div class="progress-bar" id="progress-bar"></div>
+
+      <div class="page-header">
+        <h1>2.1.2 Integration Plan</h1>
+        <p>Detail how the proposed solution will integrate with existing government systems and third-party services.</p>
+      </div>
+
+      <form id="page-form" novalidate>
+        <!-- Q1: Integration Approach -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">2.1.2.1</span>
+            <span class="question-title">Integration Approach</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Describe your overall approach to integrating with existing agency systems, including middleware, APIs, and data exchange protocols.</p>
+          <div class="form-group">
+            <label class="form-label" for="integration-approach">Integration Strategy</label>
+            <textarea id="integration-approach" name="integration_approach" class="form-textarea" rows="6" placeholder="Describe your integration strategy including API design, message queuing, ETL processes, and data format standards..." required></textarea>
+          </div>
+        </div>
+
+        <!-- Q2: Systems to Integrate -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">2.1.2.2</span>
+            <span class="question-title">Target Systems</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Select all existing agency systems your solution will need to integrate with.</p>
+          <div class="form-group">
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="target_systems" value="active-directory">
+                Active Directory / LDAP
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="target_systems" value="sap">
+                SAP ERP
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="target_systems" value="salesforce">
+                Salesforce CRM
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="target_systems" value="sharepoint">
+                SharePoint / Document Management
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="target_systems" value="legacy-mainframe">
+                Legacy Mainframe Systems
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="target_systems" value="email">
+                Email Systems (Exchange/O365)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3: API Design -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">2.1.2.3</span>
+            <span class="question-title">API Specifications</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Describe the APIs your solution will expose and the estimated number of endpoints.</p>
+          <div class="form-group">
+            <label class="form-label" for="api-count">Estimated Number of API Endpoints</label>
+            <input type="number" id="api-count" name="api_count" class="form-input" placeholder="e.g., 45" min="1" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">API Style</label>
+            <div class="radio-group radio-group--horizontal">
+              <label class="radio-option">
+                <input type="radio" name="api_style" value="rest" required>
+                RESTful
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="api_style" value="graphql">
+                GraphQL
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="api_style" value="grpc">
+                gRPC
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="api_style" value="mixed">
+                Mixed
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="api-description">API Design Details</label>
+            <textarea id="api-description" name="api_description" class="form-textarea" rows="4" placeholder="Describe authentication methods, rate limiting, versioning strategy, and documentation approach..." required></textarea>
+          </div>
+        </div>
+
+        <!-- Q4: Data Migration -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">2.1.2.4</span>
+            <span class="question-title">Data Migration Strategy</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Describe how existing data will be migrated to the new system, including volume estimates and validation approach.</p>
+          <div class="form-group">
+            <label class="form-label" for="data-volume">Estimated Data Volume to Migrate</label>
+            <input type="number" id="data-volume" name="data_volume" class="form-input" placeholder="Gigabytes (GB)" min="0">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="migration-strategy">Migration Approach</label>
+            <textarea id="migration-strategy" name="migration_strategy" class="form-textarea" rows="5" placeholder="Describe the phased migration approach, data mapping, transformation rules, validation procedures, and rollback plan..." required></textarea>
+          </div>
+        </div>
+
+        <!-- Q5: Testing Strategy -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">2.1.2.5</span>
+            <span class="question-title">Integration Testing</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Describe your approach to integration testing, including environments, tools, and acceptance criteria.</p>
+          <div class="form-group">
+            <label class="form-label" for="testing-approach">Testing Strategy</label>
+            <textarea id="testing-approach" name="testing_approach" class="form-textarea" rows="5" placeholder="Describe integration testing environments, automated testing tools, test data management, and go/no-go criteria..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="test-environments">Number of Test Environments</label>
+            <input type="number" id="test-environments" name="test_environments" class="form-input" placeholder="e.g., 3" min="1" max="10">
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <div class="action-bar">
+    <div class="action-bar-left">
+      <button class="btn btn-secondary" id="btn-save-draft">Save Draft</button>
+    </div>
+    <div class="action-bar-right">
+      <a class="btn btn-secondary" id="btn-prev">Previous</a>
+      <a class="btn btn-primary" id="btn-next">Save &amp; Continue</a>
+    </div>
+  </div>
+
+  <script src="../../js/navigation.js"></script>
+  <script src="../../js/shared.js"></script>
+</body>
+</html>
