@@ -1,5 +1,5 @@
 /* ========================================
-   GovProcure RFP Portal - Shared Utilities
+   Meridian RFP Portal - Shared Utilities
    ======================================== */
 
 // Toast notification
@@ -111,6 +111,20 @@ document.addEventListener('DOMContentLoaded', () => {
     upload.addEventListener('click', () => {
       const input = upload.querySelector('input[type="file"]');
       if (input) input.click();
+    });
+  });
+
+  // Rich text editors (contenteditable + execCommand toolbar)
+  document.querySelectorAll('.rich-editor-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cmd = btn.dataset.command;
+      if (!cmd) return;
+      const editor = btn.closest('.rich-editor');
+      const content = editor ? editor.querySelector('.rich-editor-content') : null;
+      if (content) content.focus();
+      document.execCommand(cmd, false, null);
+      btn.classList.toggle('rich-editor-btn--active');
     });
   });
 });

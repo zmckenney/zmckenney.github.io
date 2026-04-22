@@ -1,18 +1,18 @@
 /* ========================================
-   GovProcure RFP Portal - Navigation
+   Meridian RFP Portal - Navigation
    ======================================== */
 
 const NAV_TREE = [
   {
     id: 'section1',
     number: '1',
-    label: 'Company Overview',
+    label: 'Company Profile',
     children: [
-      { id: 'organization-details', number: '1.1', label: 'Organization Details', href: 'pages/section1/organization-details.html' },
+      { id: 'organization-details', number: '1.1', label: 'Organization Identification', href: 'pages/section1/organization-details.html' },
       {
-        id: 'financial-standing',
+        id: 'financial-overview',
         number: '1.2',
-        label: 'Financial Standing',
+        label: 'Financial Overview',
         children: [
           { id: 'revenue-growth', number: '1.2.1', label: 'Revenue & Growth', href: 'pages/section1/revenue-growth.html' },
           { id: 'financial-stability', number: '1.2.2', label: 'Financial Stability', href: 'pages/section1/financial-stability.html' }
@@ -24,43 +24,43 @@ const NAV_TREE = [
   {
     id: 'section2',
     number: '2',
-    label: 'Technical Approach',
+    label: 'Clinical & Technical Approach',
     children: [
       {
-        id: 'solution-architecture',
+        id: 'service-model',
         number: '2.1',
-        label: 'Solution Architecture',
+        label: 'Service Model & Integrations',
         children: [
-          { id: 'system-design', number: '2.1.1', label: 'System Design', href: 'pages/section2/system-design.html' },
-          { id: 'integration-plan', number: '2.1.2', label: 'Integration Plan', href: 'pages/section2/integration-plan.html' }
+          { id: 'system-design', number: '2.1.1', label: 'Clinical Service Model', href: 'pages/section2/system-design.html' },
+          { id: 'integration-plan', number: '2.1.2', label: 'Care Coordination & Integrations', href: 'pages/section2/integration-plan.html' }
         ]
       },
       {
-        id: 'security-compliance',
+        id: 'privacy-compliance',
         number: '2.2',
-        label: 'Security & Compliance',
+        label: 'Privacy, Compliance & Standards',
         children: [
-          { id: 'data-protection', number: '2.2.1', label: 'Data Protection', href: 'pages/section2/data-protection.html' },
+          { id: 'data-protection', number: '2.2.1', label: 'Privacy & Data Protection', href: 'pages/section2/data-protection.html' },
           {
             id: 'regulatory',
             number: '2.2.2',
-            label: 'Regulatory',
+            label: 'Regulatory Compliance',
             children: [
-              { id: 'federal-compliance', number: '2.2.2.1', label: 'Federal Compliance', href: 'pages/section2/federal-compliance.html' },
-              { id: 'industry-standards', number: '2.2.2.2', label: 'Industry Standards', href: 'pages/section2/industry-standards.html' }
+              { id: 'federal-compliance', number: '2.2.2.1', label: 'HIPAA & Federal Regulations', href: 'pages/section2/federal-compliance.html' },
+              { id: 'industry-standards', number: '2.2.2.2', label: 'Accreditation & Industry Standards', href: 'pages/section2/industry-standards.html' }
             ]
           }
         ]
       },
-      { id: 'implementation-timeline', number: '2.3', label: 'Implementation Timeline', href: 'pages/section2/implementation-timeline.html' }
+      { id: 'implementation-timeline', number: '2.3', label: 'Implementation Approach', href: 'pages/section2/implementation-timeline.html' }
     ]
   },
   {
     id: 'section3',
     number: '3',
-    label: 'Edge Cases & Testing',
+    label: 'Additional Information',
     children: [
-      { id: 'edge-cases', number: '3.1', label: 'Input Edge Cases', href: 'pages/section3/edge-cases.html' }
+      { id: 'additional-information', number: '3.1', label: 'Executive Summary & Differentiators', href: 'pages/section3/additional-information.html' }
     ]
   }
 ];

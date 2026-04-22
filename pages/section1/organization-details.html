@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.1 Organization Details - GovProcure RFP Portal</title>
+  <title>1.1 Organization Identification - Meridian RFP Portal</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body data-page-id="organization-details" data-depth="2">
@@ -12,7 +12,7 @@
     <div class="header-left">
       <a href="../../index.html" class="header-logo">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        GovProcure
+        Meridian RFP Portal
       </a>
       <div class="header-divider"></div>
       <div class="header-rfp-info">
@@ -22,8 +22,8 @@
     </div>
     <div class="header-right">
       <div class="header-user">
-        <span>Sarah Mitchell</span>
-        <div class="header-avatar">SM</div>
+        <span>Zac McKenney</span>
+        <div class="header-avatar">ZM</div>
       </div>
     </div>
   </header>
@@ -36,7 +36,7 @@
         <strong>Submission Deadline</strong>
         <div class="sidebar-deadline">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
-          <span>March 31, 2026 — 5:00 PM EST</span>
+          <span>July 22, 2026 — 5:00 PM EST</span>
         </div>
       </div>
     </aside>
@@ -46,70 +46,74 @@
       <div class="progress-bar" id="progress-bar"></div>
 
       <div class="page-header">
-        <h1>1.1 Organization Details</h1>
-        <p>Provide general information about your organization including legal name, structure, and contact details.</p>
+        <h1>1.1 Organization Identification</h1>
+        <p>Provide your organization's legal identity, headquarters location, primary contact, and an overview of your behavioral-health capabilities.</p>
       </div>
 
       <form id="page-form" novalidate>
-        <!-- Q1: Legal Name -->
+        <!-- Q1: Legal Name & DBA -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">1.1.1</span>
-            <span class="question-title">Legal Entity Name</span>
+            <span class="question-title">Legal Entity</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Enter the full legal name of your organization as registered with the Secretary of State.</p>
-          <div class="form-group">
-            <label class="form-label" for="legal-name">Legal Name</label>
-            <input type="text" id="legal-name" name="legal_name" class="form-input" placeholder="e.g., Acme Federal Solutions, LLC" required>
-          </div>
-        </div>
-
-        <!-- Q2: DBA and Structure -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">1.1.2</span>
-            <span class="question-title">Business Structure</span>
-            <span class="required-badge">Required</span>
-          </div>
-          <p class="question-help">Provide your DBA name (if applicable) and select your organization's business structure.</p>
+          <p class="question-help">Enter your organization's full legal name and any trade name you operate under.</p>
           <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="legal-name">Legal Name</label>
+              <input type="text" id="legal-name" name="legal_name" class="form-input" placeholder="e.g., Harbor Point Behavioral Health, LLC" required>
+            </div>
             <div class="form-group">
               <label class="form-label" for="dba-name">DBA / Trade Name <span class="optional">(Optional)</span></label>
               <input type="text" id="dba-name" name="dba_name" class="form-input" placeholder="Doing business as...">
             </div>
-            <div class="form-group">
-              <label class="form-label" for="business-structure">Business Structure</label>
-              <select id="business-structure" name="business_structure" class="form-select" required>
-                <option value="">Select structure...</option>
-                <option value="corporation">Corporation (C-Corp)</option>
-                <option value="s-corp">S-Corporation</option>
-                <option value="llc">Limited Liability Company (LLC)</option>
-                <option value="partnership">Partnership</option>
-                <option value="sole-proprietor">Sole Proprietorship</option>
-                <option value="non-profit">Non-Profit Organization</option>
-                <option value="joint-venture">Joint Venture</option>
-              </select>
-            </div>
           </div>
         </div>
 
-        <!-- Q3: Employee Count & Year -->
+        <!-- Q2: Headquarters Location -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1.1.2</span>
+            <span class="question-title">Headquarters Location</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Provide the primary office location of your organization.</p>
+          <div class="form-row form-row--3">
+            <div class="form-group">
+              <label class="form-label" for="hq-city">City</label>
+              <input type="text" id="hq-city" name="hq_city" class="form-input" placeholder="e.g., Boston" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hq-state">State / Province</label>
+              <input type="text" id="hq-state" name="hq_state" class="form-input" placeholder="e.g., MA" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hq-country">Country</label>
+              <input type="text" id="hq-country" name="hq_country" class="form-input" placeholder="e.g., United States" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="hq-address">Street Address</label>
+            <input type="text" id="hq-address" name="hq_address" class="form-input" placeholder="123 Main Street, Suite 400">
+          </div>
+        </div>
+
+        <!-- Q3: Website & Year Founded -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">1.1.3</span>
-            <span class="question-title">Organization Size</span>
-            <span class="required-badge">Required</span>
+            <span class="question-title">Website &amp; Founding Year</span>
           </div>
-          <p class="question-help">Indicate the number of full-time employees and the year the organization was established.</p>
+          <p class="question-help">Link to your public-facing website and tell us when your organization was founded.</p>
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="employee-count">Number of Full-Time Employees</label>
-              <input type="number" id="employee-count" name="employee_count" class="form-input" placeholder="e.g., 250" min="1" required>
+              <label class="form-label" for="website-url">Website URL</label>
+              <input type="text" id="website-url" name="website_url" class="form-input" placeholder="https://www.example.com">
             </div>
             <div class="form-group">
-              <label class="form-label" for="year-established">Year Established</label>
-              <input type="number" id="year-established" name="year_established" class="form-input" placeholder="e.g., 2005" min="1800" max="2026" required>
+              <label class="form-label" for="year-founded">Year Founded</label>
+              <input type="number" id="year-founded" name="year_founded" class="form-input" placeholder="e.g., 2011" min="1800" max="2026">
             </div>
           </div>
         </div>
@@ -121,71 +125,78 @@
             <span class="question-title">Primary Point of Contact</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Provide the contact information for the individual authorized to communicate on behalf of the organization regarding this RFP.</p>
+          <p class="question-help">Provide the individual authorized to communicate on behalf of your organization regarding this RFP.</p>
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="contact-name">Full Name</label>
-              <input type="text" id="contact-name" name="contact_name" class="form-input" placeholder="John Doe" required>
+              <input type="text" id="contact-name" name="contact_name" class="form-input" placeholder="Jane Doe" required>
             </div>
             <div class="form-group">
-              <label class="form-label" for="contact-title">Title / Role</label>
-              <input type="text" id="contact-title" name="contact_title" class="form-input" placeholder="VP of Business Development">
+              <label class="form-label" for="contact-title">Title</label>
+              <input type="text" id="contact-title" name="contact_title" class="form-input" placeholder="VP, Partnerships">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="contact-email">Email Address</label>
-              <input type="email" id="contact-email" name="contact_email" class="form-input" placeholder="john.doe@example.com" required>
+              <input type="text" id="contact-email" name="contact_email" class="form-input" placeholder="jane.doe@example.com" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="contact-phone">Phone Number</label>
-              <input type="tel" id="contact-phone" name="contact_phone" class="form-input" placeholder="(555) 123-4567">
+              <input type="text" id="contact-phone" name="contact_phone" class="form-input" placeholder="(555) 123-4567">
             </div>
           </div>
         </div>
 
-        <!-- Q5: Website & CAGE -->
+        <!-- Q5: Company Overview -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">1.1.5</span>
-            <span class="question-title">Website & Identifiers</span>
+            <span class="question-title">Company Overview &amp; Mission</span>
+            <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Provide your organization's website and any applicable government identifiers.</p>
+          <p class="question-help">Describe your organization's mission, clinical focus areas, and the populations you serve. Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label" for="website-url">Organization Website</label>
-            <input type="url" id="website-url" name="website_url" class="form-input" placeholder="https://www.example.com">
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="cage-code">CAGE Code <span class="optional">(Optional)</span></label>
-              <input type="text" id="cage-code" name="cage_code" class="form-input" placeholder="e.g., 1ABC2">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="uei-number">UEI Number <span class="optional">(Optional)</span></label>
-              <input type="text" id="uei-number" name="uei_number" class="form-input" placeholder="e.g., ABCDEFGHIJKL">
+            <label class="form-label">Overview</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe your mission, clinical focus areas, and the populations you serve..." id="company-overview" role="textbox" aria-label="Company Overview and Mission"></div>
             </div>
           </div>
         </div>
 
-        <!-- Q6: Organization Description -->
+        <!-- Q6: Unique Qualifications -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">1.1.6</span>
-            <span class="question-title">Organization Description</span>
+            <span class="question-title">Unique Behavioral-Health Qualifications</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Provide a brief description of your organization, including core capabilities, markets served, and relevant experience areas.</p>
+          <p class="question-help">What makes your organization uniquely qualified to serve a behavioral-health network like Meridian? Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label" for="org-description">Description</label>
-            <textarea id="org-description" name="org_description" class="form-textarea" rows="6" placeholder="Describe your organization's core capabilities, key service areas, and relevant experience..." required maxlength="2000" data-maxlength-counter="org-desc-counter"></textarea>
-            <div class="char-counter" id="org-desc-counter">0 / 2000 characters</div>
+            <label class="form-label">Qualifications</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Highlight licensure, accreditation, clinical leadership, and relevant behavioral-health domain experience..." id="unique-qualifications" role="textbox" aria-label="Unique Qualifications"></div>
+            </div>
           </div>
         </div>
       </form>
     </main>
   </div>
 
-  <!-- Action Bar -->
   <div class="action-bar">
     <div class="action-bar-left">
       <button class="btn btn-secondary" id="btn-save-draft">Save Draft</button>

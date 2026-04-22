@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.2.2 Financial Stability - Meridian RFP Portal</title>
+  <title>3.1 Executive Summary & Differentiators - Meridian RFP Portal</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
-<body data-page-id="financial-stability" data-depth="2">
+<body data-page-id="additional-information" data-depth="2">
 
   <header class="header">
     <div class="header-left">
@@ -46,59 +46,35 @@
       <div class="progress-bar" id="progress-bar"></div>
 
       <div class="page-header">
-        <h1>1.2.2 Financial Stability</h1>
-        <p>Demonstrate the financial soundness of your organization through audit history, risk management practices, and insurance coverage.</p>
+        <h1>3.1 Executive Summary &amp; Differentiators</h1>
+        <p>Close your response with a short headline, an executive summary, key differentiators, and any additional context you'd like the review committee to weigh.</p>
       </div>
 
       <form id="page-form" novalidate>
-        <!-- Q1: D&B & Auditor -->
+        <!-- Q1: Proposal Headline -->
         <div class="question-card">
           <div class="question-header">
-            <span class="question-number">1.2.2.1</span>
-            <span class="question-title">Financial Identifiers</span>
-          </div>
-          <p class="question-help">Provide your Dun &amp; Bradstreet number and the name of your most recent external auditor.</p>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="duns-number">D-U-N-S Number</label>
-              <input type="text" id="duns-number" name="duns_number" class="form-input" placeholder="e.g., 123456789">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="auditor-name">External Auditor</label>
-              <input type="text" id="auditor-name" name="auditor_name" class="form-input" placeholder="e.g., Marcum LLP">
-            </div>
-          </div>
-        </div>
-
-        <!-- Q2: Last Audit Year -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">1.2.2.2</span>
-            <span class="question-title">Most Recent Audit</span>
-          </div>
-          <p class="question-help">When was your most recent audit completed? Note any qualifications in the opinion.</p>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="last-audit-year">Last Audit Year</label>
-              <input type="number" id="last-audit-year" name="last_audit_year" class="form-input" placeholder="e.g., 2025" min="1990" max="2026">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="audit-opinion">Audit Opinion Type</label>
-              <input type="text" id="audit-opinion" name="audit_opinion" class="form-input" placeholder="e.g., Unqualified / Clean">
-            </div>
-          </div>
-        </div>
-
-        <!-- Q3: Financial Stability Statement -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">1.2.2.3</span>
-            <span class="question-title">Financial Stability Statement</span>
+            <span class="question-number">3.1.1</span>
+            <span class="question-title">Proposal Headline</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Describe your financial position, liquidity, and capital structure. Note any debt obligations, funding commitments, or governance oversight mechanisms that support Meridian's confidence in your stability. Formatting is supported.</p>
+          <p class="question-help">A single sentence that captures the essence of your proposal. Plain text; no formatting.</p>
           <div class="form-group">
-            <label class="form-label">Stability Statement</label>
+            <label class="form-label" for="proposal-headline">Headline</label>
+            <input type="text" id="proposal-headline" name="proposal_headline" class="form-input" placeholder="e.g., A measurement-based teletherapy platform built for multi-state behavioral-health networks" required>
+          </div>
+        </div>
+
+        <!-- Q2: Executive Summary -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">3.1.2</span>
+            <span class="question-title">Executive Summary</span>
+            <span class="required-badge">Required</span>
+          </div>
+          <p class="question-help">Give the review committee a polished executive summary — who you are, what you're proposing, and the outcomes Meridian can expect. Formatting is supported.</p>
+          <div class="form-group">
+            <label class="form-label">Executive Summary</label>
             <div class="rich-editor">
               <div class="rich-editor-toolbar">
                 <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
@@ -107,21 +83,21 @@
                 <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
                 <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
               </div>
-              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe liquidity, capital structure, financing, and governance oversight that support stability..." id="stability-statement" role="textbox" aria-label="Financial Stability Statement"></div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="A polished executive summary covering who you are, what you propose, and the expected outcomes..." id="exec-summary" role="textbox" aria-label="Executive Summary"></div>
             </div>
           </div>
         </div>
 
-        <!-- Q4: Risk Management & Insurance -->
+        <!-- Q3: Key Differentiators -->
         <div class="question-card">
           <div class="question-header">
-            <span class="question-number">1.2.2.4</span>
-            <span class="question-title">Risk Management &amp; Insurance</span>
+            <span class="question-number">3.1.3</span>
+            <span class="question-title">Key Differentiators</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Describe your enterprise risk management framework and the insurance coverages you maintain (professional liability, cyber liability, E&amp;O, general liability, etc.). Formatting is supported.</p>
+          <p class="question-help">What sets your proposal apart from other behavioral-health vendors Meridian might be evaluating? Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label">Risk &amp; Insurance Narrative</label>
+            <label class="form-label">Differentiators</label>
             <div class="rich-editor">
               <div class="rich-editor-toolbar">
                 <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
@@ -130,7 +106,29 @@
                 <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
                 <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
               </div>
-              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe enterprise risk management, insurance coverages, and incident response practices..." id="risk-insurance" role="textbox" aria-label="Risk Management and Insurance"></div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Highlight what sets your proposal apart from other vendors..." id="differentiators" role="textbox" aria-label="Key Differentiators"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4: Additional Comments -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">3.1.4</span>
+            <span class="question-title">Additional Comments</span>
+          </div>
+          <p class="question-help">Anything else the review committee should consider that wasn't captured in earlier sections. Formatting is supported.</p>
+          <div class="form-group">
+            <label class="form-label">Additional Comments</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Anything else the review committee should weigh..." id="additional-comments" role="textbox" aria-label="Additional Comments"></div>
             </div>
           </div>
         </div>

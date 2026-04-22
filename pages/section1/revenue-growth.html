@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.2.1 Revenue & Growth - GovProcure RFP Portal</title>
+  <title>1.2.1 Revenue & Growth - Meridian RFP Portal</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body data-page-id="revenue-growth" data-depth="2">
@@ -12,7 +12,7 @@
     <div class="header-left">
       <a href="../../index.html" class="header-logo">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        GovProcure
+        Meridian RFP Portal
       </a>
       <div class="header-divider"></div>
       <div class="header-rfp-info">
@@ -21,7 +21,10 @@
       </div>
     </div>
     <div class="header-right">
-      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+      <div class="header-user">
+        <span>Zac McKenney</span>
+        <div class="header-avatar">ZM</div>
+      </div>
     </div>
   </header>
 
@@ -33,7 +36,7 @@
         <strong>Submission Deadline</strong>
         <div class="sidebar-deadline">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
-          <span>March 31, 2026 — 5:00 PM EST</span>
+          <span>July 22, 2026 — 5:00 PM EST</span>
         </div>
       </div>
     </aside>
@@ -43,133 +46,93 @@
       <div class="progress-bar" id="progress-bar"></div>
 
       <div class="page-header">
-        <h1>1.2.1 Revenue & Growth</h1>
-        <p>Provide revenue figures and growth indicators to demonstrate financial capability.</p>
+        <h1>1.2.1 Revenue &amp; Growth</h1>
+        <p>Summarize your recent revenue performance, headcount, and growth strategy. Narrative responses support rich formatting; staffing counts and fiscal-year fields are plain text or numbers.</p>
       </div>
 
       <form id="page-form" novalidate>
-        <!-- Q1: Annual Revenue -->
+        <!-- Q1: Fiscal Year & Revenue -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">1.2.1.1</span>
-            <span class="question-title">Annual Revenue (Most Recent Fiscal Year)</span>
+            <span class="question-title">Most Recent Fiscal Year</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Enter your organization's total annual revenue in USD. Use the slider for approximate range or type an exact figure.</p>
-          <div class="form-group">
-            <label class="form-label" for="annual-revenue">Revenue (USD)</label>
-            <input type="text" id="annual-revenue" name="annual_revenue" class="form-input" placeholder="$0.00" required>
-            <p class="input-mask-hint">Format: $X,XXX,XXX.XX</p>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Revenue Range <span class="range-value" id="revenue-range-value">$50M</span></label>
-            <input type="range" id="revenue-range" min="0" max="500" value="50" step="5">
+          <p class="question-help">Identify the most recent fiscal year for which audited or reviewed financials are available.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="last-fy">Last Fiscal Year</label>
+              <input type="text" id="last-fy" name="last_fy" class="form-input" placeholder="e.g., FY2025 (ending June 30, 2025)" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-fy-revenue">Last FY Revenue (USD)</label>
+              <input type="text" id="last-fy-revenue" name="last_fy_revenue" class="form-input" placeholder="e.g., $42,500,000">
+            </div>
           </div>
         </div>
 
-        <!-- Q2: Revenue Growth -->
+        <!-- Q2: Headcount -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">1.2.1.2</span>
-            <span class="question-title">Revenue Growth Rate</span>
+            <span class="question-title">Staffing</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Provide your year-over-year revenue growth rate for the past three fiscal years.</p>
-          <div class="form-row form-row--3">
+          <p class="question-help">Report your total headcount and the subset of staff that are licensed clinicians.</p>
+          <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="growth-year1">FY 2023 Growth (%)</label>
-              <input type="number" id="growth-year1" name="growth_year1" class="form-input" placeholder="e.g., 12.5" step="0.1" required>
+              <label class="form-label" for="fte-count">Full-Time Employees</label>
+              <input type="number" id="fte-count" name="fte_count" class="form-input" placeholder="e.g., 240" min="0" required>
             </div>
             <div class="form-group">
-              <label class="form-label" for="growth-year2">FY 2024 Growth (%)</label>
-              <input type="number" id="growth-year2" name="growth_year2" class="form-input" placeholder="e.g., 15.2" step="0.1" required>
+              <label class="form-label" for="clinical-staff">Licensed Clinical Staff</label>
+              <input type="number" id="clinical-staff" name="clinical_staff" class="form-input" placeholder="e.g., 115" min="0" required>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="growth-year3">FY 2025 Growth (%)</label>
-              <input type="number" id="growth-year3" name="growth_year3" class="form-input" placeholder="e.g., 18.0" step="0.1" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">3-Year Average Growth: <strong id="avg-growth">—</strong></label>
           </div>
         </div>
 
-        <!-- Q3: Revenue Source -->
+        <!-- Q3: 3-Year Revenue Narrative -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">1.2.1.3</span>
-            <span class="question-title">Primary Revenue Source</span>
+            <span class="question-title">3-Year Revenue Narrative</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Select the primary source of your organization's revenue.</p>
+          <p class="question-help">Walk us through your revenue trajectory over the past three fiscal years. Describe the drivers of growth, any non-recurring events, and the mix of revenue by service line. Formatting is supported.</p>
           <div class="form-group">
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="revenue_source" value="federal" required>
-                Federal Government Contracts
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="revenue_source" value="state-local">
-                State & Local Government
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="revenue_source" value="commercial">
-                Commercial / Private Sector
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="revenue_source" value="mixed"
-                  data-conditional-trigger="show" data-conditional-target="revenue-mix-section">
-                Mixed (Specify breakdown below)
-              </label>
-            </div>
-          </div>
-          <div class="conditional-section" id="revenue-mix-section" data-conditional-group="revenue_source">
-            <div class="form-group">
-              <label class="form-label" for="revenue-breakdown">Revenue Breakdown by Sector</label>
-              <textarea id="revenue-breakdown" name="revenue_breakdown" class="form-textarea" rows="3" placeholder="e.g., Federal: 40%, State/Local: 30%, Commercial: 30%"></textarea>
+            <label class="form-label">Revenue Narrative</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe three years of revenue performance, growth rates, and service-line mix..." id="revenue-narrative" role="textbox" aria-label="3-Year Revenue Narrative"></div>
             </div>
           </div>
         </div>
 
-        <!-- Q4: Government Contract Value -->
+        <!-- Q4: Growth Strategy -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">1.2.1.4</span>
-            <span class="question-title">Largest Single Government Contract</span>
-          </div>
-          <p class="question-help">Provide the value and description of the largest single government contract your organization has held in the past 5 years.</p>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="largest-contract-value">Contract Value (USD)</label>
-              <input type="text" id="largest-contract-value" name="largest_contract_value" class="form-input" placeholder="$0.00">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="largest-contract-agency">Awarding Agency</label>
-              <input type="text" id="largest-contract-agency" name="largest_contract_agency" class="form-input" placeholder="e.g., Department of Defense">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="largest-contract-desc">Brief Description</label>
-            <textarea id="largest-contract-desc" name="largest_contract_desc" class="form-textarea" rows="3" placeholder="Describe the scope and nature of the contract..."></textarea>
-          </div>
-        </div>
-
-        <!-- Q5: Financial Statements -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">1.2.1.5</span>
-            <span class="question-title">Audited Financial Statements</span>
+            <span class="question-title">Growth Strategy</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Upload your most recent audited financial statements (PDF format, max 25MB).</p>
+          <p class="question-help">Outline your growth plan for the next 2–3 years, including target markets, investments in clinical capacity, and any planned expansions of telehealth infrastructure. Formatting is supported.</p>
           <div class="form-group">
-            <div class="file-upload">
-              <div class="file-upload-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9,15 12,12 15,15"/></svg>
+            <label class="form-label">Growth Strategy</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
               </div>
-              <div class="file-upload-text"><span>Click to upload</span> or drag and drop</div>
-              <div class="file-upload-hint">PDF up to 25MB</div>
-              <input type="file" id="financial-statements" name="financial_statements" accept=".pdf" required>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe target markets, clinical capacity investments, and telehealth expansion plans..." id="growth-strategy" role="textbox" aria-label="Growth Strategy"></div>
             </div>
           </div>
         </div>
@@ -189,43 +152,5 @@
 
   <script src="../../js/navigation.js"></script>
   <script src="../../js/shared.js"></script>
-  <script>
-    // Revenue range slider
-    const rangeEl = document.getElementById('revenue-range');
-    const rangeVal = document.getElementById('revenue-range-value');
-    rangeEl.addEventListener('input', () => {
-      const val = parseInt(rangeEl.value, 10);
-      rangeVal.textContent = val >= 1000 ? `$${(val/1000).toFixed(1)}B` : `$${val}M`;
-    });
-
-    // Auto-calc average growth
-    const g1 = document.getElementById('growth-year1');
-    const g2 = document.getElementById('growth-year2');
-    const g3 = document.getElementById('growth-year3');
-    const avgDisplay = document.getElementById('avg-growth');
-    function calcAvg() {
-      const vals = [g1.value, g2.value, g3.value].map(Number).filter(v => !isNaN(v) && v !== 0);
-      if (vals.length === 3) {
-        avgDisplay.textContent = (vals.reduce((a,b) => a+b, 0) / 3).toFixed(1) + '%';
-      } else {
-        avgDisplay.textContent = '—';
-      }
-    }
-    [g1, g2, g3].forEach(el => el.addEventListener('input', calcAvg));
-
-    // Currency mask helper
-    document.getElementById('annual-revenue').addEventListener('blur', function() {
-      let val = this.value.replace(/[^0-9.]/g, '');
-      if (val) {
-        this.value = '$' + parseFloat(val).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      }
-    });
-    document.getElementById('largest-contract-value').addEventListener('blur', function() {
-      let val = this.value.replace(/[^0-9.]/g, '');
-      if (val) {
-        this.value = '$' + parseFloat(val).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      }
-    });
-  </script>
 </body>
 </html>

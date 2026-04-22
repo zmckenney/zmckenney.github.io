@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.2.2.1 Federal Compliance - GovProcure RFP Portal</title>
+  <title>2.2.2.1 HIPAA & Federal Regulations - Meridian RFP Portal</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body data-page-id="federal-compliance" data-depth="2">
@@ -12,7 +12,7 @@
     <div class="header-left">
       <a href="../../index.html" class="header-logo">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        GovProcure
+        Meridian RFP Portal
       </a>
       <div class="header-divider"></div>
       <div class="header-rfp-info">
@@ -21,7 +21,10 @@
       </div>
     </div>
     <div class="header-right">
-      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+      <div class="header-user">
+        <span>Zac McKenney</span>
+        <div class="header-avatar">ZM</div>
+      </div>
     </div>
   </header>
 
@@ -33,7 +36,7 @@
         <strong>Submission Deadline</strong>
         <div class="sidebar-deadline">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
-          <span>March 31, 2026 — 5:00 PM EST</span>
+          <span>July 22, 2026 — 5:00 PM EST</span>
         </div>
       </div>
     </aside>
@@ -43,157 +46,73 @@
       <div class="progress-bar" id="progress-bar"></div>
 
       <div class="page-header">
-        <h1>2.2.2.1 Federal Compliance</h1>
-        <p>Detail your compliance with federal security frameworks and regulatory requirements.</p>
+        <h1>2.2.2.1 HIPAA &amp; Federal Regulations</h1>
+        <p>Summarize your HIPAA compliance posture and your handling of federal behavioral-health regulations such as 42 CFR Part 2 and SAMHSA requirements.</p>
       </div>
 
       <form id="page-form" novalidate>
-        <!-- Q1: FedRAMP -->
+        <!-- Q1: SOC2 Date & BAA -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.2.1.1</span>
-            <span class="question-title">FedRAMP Authorization</span>
-            <span class="required-badge">Required</span>
+            <span class="question-title">SOC2 Report &amp; BAA</span>
           </div>
-          <p class="question-help">What is the current FedRAMP authorization status of your solution?</p>
-          <div class="form-group">
-            <label class="form-label" for="fedramp-status">FedRAMP Status</label>
-            <select id="fedramp-status" name="fedramp_status" class="form-select" required>
-              <option value="">Select status...</option>
-              <option value="authorized-high">Authorized — High Impact</option>
-              <option value="authorized-moderate">Authorized — Moderate Impact</option>
-              <option value="authorized-low">Authorized — Low Impact</option>
-              <option value="in-process">In Process (JAB or Agency)</option>
-              <option value="ready">FedRAMP Ready</option>
-              <option value="not-started">Not Yet Initiated</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="fedramp-id">FedRAMP Package ID <span class="optional">(if authorized)</span></label>
-            <input type="text" id="fedramp-id" name="fedramp_id" class="form-input" placeholder="e.g., FR1234567890">
+          <p class="question-help">Provide the date of your most recent SOC2 Type II report and a link to your standard Business Associate Agreement template if you maintain one.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="soc2-date">SOC2 Type II Report Date</label>
+              <input type="date" id="soc2-date" name="soc2_date" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="baa-url">BAA Template URL</label>
+              <input type="text" id="baa-url" name="baa_url" class="form-input" placeholder="https://example.com/legal/baa">
+            </div>
           </div>
         </div>
 
-        <!-- Q2: FISMA -->
+        <!-- Q2: HIPAA Compliance Program -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.2.1.2</span>
-            <span class="question-title">FISMA Compliance</span>
+            <span class="question-title">HIPAA Compliance Program</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Describe your NIST 800-53 control implementation status and most recent assessment.</p>
+          <p class="question-help">Describe your overall HIPAA compliance program: governance, risk assessments, workforce training cadence, BAAs with subcontractors, and incident response. Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label" for="fisma-description">FISMA Compliance Description</label>
-            <textarea id="fisma-description" name="fisma_description" class="form-textarea" rows="4" placeholder="Describe NIST 800-53 rev5 control families implemented, POA&M status, and continuous monitoring approach..." required></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="last-assessment-date">Date of Last Security Assessment</label>
-            <input type="date" id="last-assessment-date" name="last_assessment_date" class="form-input" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Assessment Result</label>
-            <div class="radio-group radio-group--horizontal">
-              <label class="radio-option">
-                <input type="radio" name="assessment_result" value="pass" required>
-                Passed
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="assessment_result" value="conditional">
-                Conditional
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="assessment_result" value="fail"
-                  data-conditional-trigger="show" data-conditional-target="assessment-remediation">
-                Remediation Required
-              </label>
-            </div>
-          </div>
-          <div class="conditional-section" id="assessment-remediation" data-conditional-group="assessment_result">
-            <div class="form-group">
-              <label class="form-label" for="remediation-plan">Remediation Plan</label>
-              <textarea id="remediation-plan" name="remediation_plan" class="form-textarea" rows="3" placeholder="Describe the remediation actions and expected completion timeline..."></textarea>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="remediation-date">Expected Remediation Date</label>
-              <input type="date" id="remediation-date" name="remediation_date" class="form-input">
+            <label class="form-label">HIPAA Program</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe governance, risk assessments, training, subcontractor BAAs, incident response..." id="hipaa-program" role="textbox" aria-label="HIPAA Compliance Program"></div>
             </div>
           </div>
         </div>
 
-        <!-- Q3: CMMC -->
+        <!-- Q3: Federal Behavioral-Health Regulations -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.2.1.3</span>
-            <span class="question-title">CMMC Certification</span>
+            <span class="question-title">Federal Behavioral-Health Regulations</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">What is your current CMMC (Cybersecurity Maturity Model Certification) level?</p>
+          <p class="question-help">Describe how your platform and operations meet federal regulations specific to behavioral-health and SUD treatment — 42 CFR Part 2, SAMHSA Confidentiality of Substance Use Disorder Records, Ryan Haight, the Controlled Substances Act as relevant to telehealth prescribing, and any Medicaid-specific requirements. Formatting is supported.</p>
           <div class="form-group">
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="cmmc_level" value="level3" required>
-                Level 3 — Expert (171+ practices)
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="cmmc_level" value="level2">
-                Level 2 — Advanced (110 practices)
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="cmmc_level" value="level1">
-                Level 1 — Foundational (17 practices)
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="cmmc_level" value="in-progress"
-                  data-conditional-trigger="show" data-conditional-target="cmmc-timeline">
-                In Progress — Pursuing certification
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="cmmc_level" value="not-certified">
-                Not Currently Certified
-              </label>
+            <label class="form-label">Federal Regulations</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe 42 CFR Part 2, SAMHSA confidentiality, Ryan Haight, and Medicaid-specific requirements..." id="federal-regulations" role="textbox" aria-label="Federal Behavioral Health Regulations"></div>
             </div>
-          </div>
-          <div class="conditional-section" id="cmmc-timeline" data-conditional-group="cmmc_level">
-            <div class="form-group">
-              <label class="form-label" for="cmmc-target-level">Target CMMC Level</label>
-              <select id="cmmc-target-level" name="cmmc_target_level" class="form-select">
-                <option value="">Select target...</option>
-                <option value="level1">Level 1</option>
-                <option value="level2">Level 2</option>
-                <option value="level3">Level 3</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="cmmc-target-date">Expected Certification Date</label>
-              <input type="date" id="cmmc-target-date" name="cmmc_target_date" class="form-input">
-            </div>
-          </div>
-        </div>
-
-        <!-- Q4: Section 508 -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">2.2.2.1.4</span>
-            <span class="question-title">Section 508 / Accessibility Compliance</span>
-            <span class="required-badge">Required</span>
-          </div>
-          <p class="question-help">Describe how your solution meets Section 508 accessibility requirements.</p>
-          <div class="form-group">
-            <label class="form-label" for="accessibility-desc">Accessibility Compliance Description</label>
-            <textarea id="accessibility-desc" name="accessibility_desc" class="form-textarea" rows="4" placeholder="Describe WCAG 2.1 AA compliance, VPAT availability, screen reader support, keyboard navigation, and testing methodology..." required></textarea>
-          </div>
-        </div>
-
-        <!-- Q5: Additional Frameworks -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">2.2.2.1.5</span>
-            <span class="question-title">Additional Federal Compliance</span>
-          </div>
-          <p class="question-help">Describe any additional federal compliance frameworks your solution adheres to.</p>
-          <div class="form-group">
-            <label class="form-label" for="additional-compliance">Additional Compliance Details</label>
-            <textarea id="additional-compliance" name="additional_compliance" class="form-textarea" rows="4" placeholder="e.g., ITAR, EAR, HIPAA (if applicable), CJIS, IRS 1075, etc."></textarea>
           </div>
         </div>
       </form>

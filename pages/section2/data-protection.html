@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.2.1 Data Protection - GovProcure RFP Portal</title>
+  <title>2.2.1 Privacy & Data Protection - Meridian RFP Portal</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body data-page-id="data-protection" data-depth="2">
@@ -12,7 +12,7 @@
     <div class="header-left">
       <a href="../../index.html" class="header-logo">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        GovProcure
+        Meridian RFP Portal
       </a>
       <div class="header-divider"></div>
       <div class="header-rfp-info">
@@ -21,7 +21,10 @@
       </div>
     </div>
     <div class="header-right">
-      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+      <div class="header-user">
+        <span>Zac McKenney</span>
+        <div class="header-avatar">ZM</div>
+      </div>
     </div>
   </header>
 
@@ -33,7 +36,7 @@
         <strong>Submission Deadline</strong>
         <div class="sidebar-deadline">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
-          <span>March 31, 2026 — 5:00 PM EST</span>
+          <span>July 22, 2026 — 5:00 PM EST</span>
         </div>
       </div>
     </aside>
@@ -43,142 +46,93 @@
       <div class="progress-bar" id="progress-bar"></div>
 
       <div class="page-header">
-        <h1>2.2.1 Data Protection</h1>
-        <p>Describe your data protection measures including encryption, access controls, and incident response procedures.</p>
+        <h1>2.2.1 Privacy &amp; Data Protection</h1>
+        <p>Describe how your organization protects PHI across its lifecycle, and provide the personnel and dates that anchor your privacy program.</p>
       </div>
 
       <form id="page-form" novalidate>
-        <!-- Q1: Encryption -->
+        <!-- Q1: Privacy Officer -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.1.1</span>
-            <span class="question-title">Encryption Standards</span>
+            <span class="question-title">Privacy Officer</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Describe the encryption standards used for data at rest and in transit.</p>
-          <div class="form-group">
-            <label class="form-label" for="encryption-transit">Encryption in Transit</label>
-            <select id="encryption-transit" name="encryption_transit" class="form-select" required>
-              <option value="">Select standard...</option>
-              <option value="tls12">TLS 1.2</option>
-              <option value="tls13">TLS 1.3</option>
-              <option value="mtls">Mutual TLS (mTLS)</option>
-              <option value="ipsec">IPSec VPN</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="encryption-rest">Encryption at Rest</label>
-            <select id="encryption-rest" name="encryption_rest" class="form-select" required>
-              <option value="">Select standard...</option>
-              <option value="aes128">AES-128</option>
-              <option value="aes256">AES-256</option>
-              <option value="fips140">FIPS 140-2 Validated</option>
-              <option value="fips140-3">FIPS 140-3 Validated</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="encryption-details">Additional Encryption Details</label>
-            <textarea id="encryption-details" name="encryption_details" class="form-textarea" rows="3" placeholder="Describe key management, rotation policies, and any additional encryption measures..."></textarea>
+          <p class="question-help">Provide the name and email of the individual responsible for your privacy program.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="privacy-officer-name">Privacy Officer Name</label>
+              <input type="text" id="privacy-officer-name" name="privacy_officer_name" class="form-input" placeholder="e.g., Alex Rivera, JD" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="privacy-officer-email">Privacy Officer Email</label>
+              <input type="text" id="privacy-officer-email" name="privacy_officer_email" class="form-input" placeholder="privacy@example.com" required>
+            </div>
           </div>
         </div>
 
-        <!-- Q2: Access Control -->
+        <!-- Q2: Last Privacy Audit -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.1.2</span>
-            <span class="question-title">Access Control Model</span>
-            <span class="required-badge">Required</span>
+            <span class="question-title">Last Privacy Audit</span>
           </div>
-          <p class="question-help">Select the access control models implemented in the proposed solution.</p>
-          <div class="form-group">
-            <div class="checkbox-group">
-              <label class="checkbox-option">
-                <input type="checkbox" name="access_control" value="rbac">
-                Role-Based Access Control (RBAC)
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="access_control" value="abac">
-                Attribute-Based Access Control (ABAC)
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="access_control" value="mac">
-                Mandatory Access Control (MAC)
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="access_control" value="zero-trust">
-                Zero Trust Architecture
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="access_control" value="mfa">
-                Multi-Factor Authentication (MFA)
-              </label>
+          <p class="question-help">When was your most recent third-party privacy or security audit completed?</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="last-privacy-audit">Last Privacy Audit Date</label>
+              <input type="date" id="last-privacy-audit" name="last_privacy_audit" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="audit-firm">Auditing Firm</label>
+              <input type="text" id="audit-firm" name="audit_firm" class="form-input" placeholder="e.g., Schellman, A-LIGN, Coalfire">
             </div>
           </div>
         </div>
 
-        <!-- Q3: Data Classification -->
+        <!-- Q3: HIPAA Privacy Program -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.1.3</span>
-            <span class="question-title">Data Classification & Handling</span>
+            <span class="question-title">HIPAA Privacy Program</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Does your solution support data classification levels as defined by federal guidelines?</p>
+          <p class="question-help">Describe your HIPAA privacy program: how you manage minimum necessary disclosures, patient rights workflows, authorizations, accounting of disclosures, and training. Formatting is supported.</p>
           <div class="form-group">
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="data_classification" value="full" required
-                  data-conditional-trigger="show" data-conditional-target="classification-detail">
-                Yes — Full support for CUI, FOUO, and classified markings
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="data_classification" value="partial"
-                  data-conditional-trigger="show" data-conditional-target="classification-detail">
-                Partial — Support for some classification levels
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="data_classification" value="planned">
-                Not yet — Currently in development
-              </label>
-            </div>
-          </div>
-          <div class="conditional-section" id="classification-detail" data-conditional-group="data_classification">
-            <div class="form-group">
-              <label class="form-label" for="classification-desc">Classification Support Details</label>
-              <textarea id="classification-desc" name="classification_desc" class="form-textarea" rows="3" placeholder="Describe which classification levels are supported and how data is labeled, stored, and transmitted according to classification..."></textarea>
+            <label class="form-label">Privacy Program</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe minimum necessary, authorizations, patient rights workflows, and training..." id="privacy-program" role="textbox" aria-label="HIPAA Privacy Program"></div>
             </div>
           </div>
         </div>
 
-        <!-- Q4: Incident Response -->
+        <!-- Q4: Data Protection Practices -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.1.4</span>
-            <span class="question-title">Incident Response Plan</span>
+            <span class="question-title">Data Protection Practices</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Describe your data breach and security incident response procedures.</p>
+          <p class="question-help">Describe your technical safeguards for PHI: encryption at rest and in transit, key management, access control, logging, and breach response. Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label" for="incident-response">Incident Response Description</label>
-            <textarea id="incident-response" name="incident_response" class="form-textarea" rows="6" placeholder="Describe incident detection, classification, containment, eradication, recovery, and notification procedures. Include response time SLAs..." required></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="notification-time">Breach Notification Timeline (hours)</label>
-            <input type="number" id="notification-time" name="notification_time" class="form-input" placeholder="e.g., 72" min="1" max="720" required>
-          </div>
-        </div>
-
-        <!-- Q5: Data Retention -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">2.2.1.5</span>
-            <span class="question-title">Data Retention & Disposal</span>
-            <span class="required-badge">Required</span>
-          </div>
-          <p class="question-help">Describe your data retention policies and secure data disposal methods.</p>
-          <div class="form-group">
-            <label class="form-label" for="retention-policy">Retention & Disposal Policy</label>
-            <textarea id="retention-policy" name="retention_policy" class="form-textarea" rows="4" placeholder="Describe data retention schedules, archival processes, and secure destruction methods (e.g., DoD 5220.22-M, NIST 800-88)..." required></textarea>
+            <label class="form-label">Data Protection</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe encryption, key management, access control, logging, and breach response..." id="data-protection" role="textbox" aria-label="Data Protection Practices"></div>
+            </div>
           </div>
         </div>
       </form>

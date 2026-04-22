@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.1.1 System Design - GovProcure RFP Portal</title>
+  <title>2.1.1 Clinical Service Model - Meridian RFP Portal</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body data-page-id="system-design" data-depth="2">
@@ -12,7 +12,7 @@
     <div class="header-left">
       <a href="../../index.html" class="header-logo">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        GovProcure
+        Meridian RFP Portal
       </a>
       <div class="header-divider"></div>
       <div class="header-rfp-info">
@@ -21,7 +21,10 @@
       </div>
     </div>
     <div class="header-right">
-      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+      <div class="header-user">
+        <span>Zac McKenney</span>
+        <div class="header-avatar">ZM</div>
+      </div>
     </div>
   </header>
 
@@ -33,7 +36,7 @@
         <strong>Submission Deadline</strong>
         <div class="sidebar-deadline">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
-          <span>March 31, 2026 — 5:00 PM EST</span>
+          <span>July 22, 2026 — 5:00 PM EST</span>
         </div>
       </div>
     </aside>
@@ -43,164 +46,97 @@
       <div class="progress-bar" id="progress-bar"></div>
 
       <div class="page-header">
-        <h1>2.1.1 System Design</h1>
-        <p>Describe the proposed system architecture, technology stack, and design principles for the solution.</p>
+        <h1>2.1.1 Clinical Service Model</h1>
+        <p>Describe the clinical service model your platform will enable for Meridian's network, the populations it addresses, and how outcomes are measured.</p>
       </div>
 
       <form id="page-form" novalidate>
-        <!-- Q1: Architecture Overview -->
+        <!-- Q1: Service Model Identifiers -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.1.1.1</span>
-            <span class="question-title">Solution Architecture Overview</span>
+            <span class="question-title">Service Model Summary</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Provide a high-level description of your proposed system architecture, including major components, services, and their interactions.</p>
-          <div class="form-group">
-            <label class="form-label" for="arch-overview">Architecture Description</label>
-            <textarea id="arch-overview" name="arch_overview" class="form-textarea" rows="8" placeholder="Describe your proposed architecture including microservices, data flows, API layers, and infrastructure components..." required maxlength="5000" data-maxlength-counter="arch-counter"></textarea>
-            <div class="char-counter" id="arch-counter">0 / 5000 characters</div>
+          <p class="question-help">Give your proposed service model a short name and note the primary care populations it's designed to serve.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="model-name">Service Model Name</label>
+              <input type="text" id="model-name" name="model_name" class="form-input" placeholder="e.g., Integrated Teletherapy for Mood &amp; Anxiety" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="populations">Primary Care Populations</label>
+              <input type="text" id="populations" name="populations" class="form-input" placeholder="e.g., Adults, Adolescents, Perinatal" required>
+            </div>
           </div>
         </div>
 
-        <!-- Q2: Hosting Environment -->
+        <!-- Q2: Clinical Approach -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.1.1.2</span>
-            <span class="question-title">Hosting Environment</span>
+            <span class="question-title">Clinical Approach &amp; Methodology</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Select the proposed hosting environment and describe the deployment approach.</p>
+          <p class="question-help">Describe the clinical approach, modalities, and care pathways supported by your platform (e.g., CBT, DBT, measurement-based care, collaborative care). Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label" for="hosting-env">Primary Hosting Platform</label>
-            <select id="hosting-env" name="hosting_env" class="form-select" required>
-              <option value="">Select platform...</option>
-              <option value="aws-govcloud">AWS GovCloud</option>
-              <option value="azure-gov">Microsoft Azure Government</option>
-              <option value="gcp">Google Cloud Platform</option>
-              <option value="on-prem">On-Premises Government Data Center</option>
-              <option value="hybrid">Hybrid (Cloud + On-Premises)</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Deployment Architecture</label>
-            <div class="checkbox-group">
-              <label class="checkbox-option">
-                <input type="checkbox" name="deployment_arch" value="containers">
-                Containerized (Docker/Kubernetes)
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="deployment_arch" value="serverless">
-                Serverless Functions
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="deployment_arch" value="vms">
-                Virtual Machines
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="deployment_arch" value="paas">
-                Platform as a Service (PaaS)
-              </label>
+            <label class="form-label">Approach</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe modalities, care pathways, and how your platform supports each..." id="clinical-approach" role="textbox" aria-label="Clinical Approach and Methodology"></div>
             </div>
           </div>
         </div>
 
-        <!-- Q3: Scalability -->
+        <!-- Q3: Evidence Base -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.1.1.3</span>
-            <span class="question-title">Scalability & Performance</span>
+            <span class="question-title">Evidence Base</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Describe how the solution will handle varying workloads and meet performance requirements.</p>
+          <p class="question-help">Summarize the peer-reviewed evidence, published studies, or outcomes data that support your service model. Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label" for="max-users">Expected Maximum Concurrent Users</label>
-            <input type="number" id="max-users" name="max_users" class="form-input" placeholder="e.g., 10000" min="1" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="scalability-approach">Scalability Approach</label>
-            <textarea id="scalability-approach" name="scalability_approach" class="form-textarea" rows="4" placeholder="Describe auto-scaling policies, load balancing strategies, and capacity planning..." required></textarea>
+            <label class="form-label">Evidence Base</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Summarize peer-reviewed studies, outcomes data, and empirical support..." id="evidence-base" role="textbox" aria-label="Evidence Base"></div>
+            </div>
           </div>
         </div>
 
-        <!-- Q4: Technology Stack -->
+        <!-- Q4: Outcome Measurement -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.1.1.4</span>
-            <span class="question-title">Technology Stack</span>
+            <span class="question-title">Outcome Measurement</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Select the primary technologies that will be used in the solution. Check all that apply.</p>
+          <p class="question-help">Describe how you measure clinical outcomes (instruments used, cadence, thresholds) and how data are reported back to clinicians and clients. Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label">Frontend Technologies</label>
-            <div class="checkbox-group checkbox-group--horizontal">
-              <label class="checkbox-option"><input type="checkbox" name="frontend_tech" value="react"> React</label>
-              <label class="checkbox-option"><input type="checkbox" name="frontend_tech" value="angular"> Angular</label>
-              <label class="checkbox-option"><input type="checkbox" name="frontend_tech" value="vue"> Vue.js</label>
-              <label class="checkbox-option"><input type="checkbox" name="frontend_tech" value="other-fe"> Other</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Backend Technologies</label>
-            <div class="checkbox-group checkbox-group--horizontal">
-              <label class="checkbox-option"><input type="checkbox" name="backend_tech" value="java"> Java / Spring</label>
-              <label class="checkbox-option"><input type="checkbox" name="backend_tech" value="dotnet"> .NET</label>
-              <label class="checkbox-option"><input type="checkbox" name="backend_tech" value="python"> Python</label>
-              <label class="checkbox-option"><input type="checkbox" name="backend_tech" value="node"> Node.js</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Database Technologies</label>
-            <div class="checkbox-group checkbox-group--horizontal">
-              <label class="checkbox-option"><input type="checkbox" name="db_tech" value="postgres"> PostgreSQL</label>
-              <label class="checkbox-option"><input type="checkbox" name="db_tech" value="oracle"> Oracle</label>
-              <label class="checkbox-option"><input type="checkbox" name="db_tech" value="mongodb"> MongoDB</label>
-              <label class="checkbox-option"><input type="checkbox" name="db_tech" value="dynamodb"> DynamoDB</label>
-            </div>
-          </div>
-        </div>
-
-        <!-- Q5: Architecture Diagram -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">2.1.1.5</span>
-            <span class="question-title">Architecture Diagram</span>
-          </div>
-          <p class="question-help">Upload a high-level architecture diagram illustrating the proposed solution components and data flows.</p>
-          <div class="form-group">
-            <div class="file-upload">
-              <div class="file-upload-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9,15 12,12 15,15"/></svg>
+            <label class="form-label">Outcome Measurement</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
               </div>
-              <div class="file-upload-text"><span>Click to upload</span> or drag and drop</div>
-              <div class="file-upload-hint">PNG, JPG, PDF, or Visio up to 10MB</div>
-              <input type="file" id="arch-diagram" name="arch_diagram" accept=".png,.jpg,.jpeg,.pdf,.vsdx">
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe instruments (PHQ-9, GAD-7, etc.), cadence, and reporting loops..." id="outcomes" role="textbox" aria-label="Outcome Measurement"></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Q6: Disaster Recovery -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">2.1.1.6</span>
-            <span class="question-title">Disaster Recovery & High Availability</span>
-            <span class="required-badge">Required</span>
-          </div>
-          <p class="question-help">Describe the disaster recovery and high availability strategy for the proposed solution.</p>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="rto">Recovery Time Objective (RTO)</label>
-              <input type="number" id="rto" name="rto" class="form-input" placeholder="Hours" min="0" step="0.5" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="rpo">Recovery Point Objective (RPO)</label>
-              <input type="number" id="rpo" name="rpo" class="form-input" placeholder="Hours" min="0" step="0.5" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="dr-strategy">DR Strategy Description</label>
-            <textarea id="dr-strategy" name="dr_strategy" class="form-textarea" rows="4" placeholder="Describe failover mechanisms, backup strategies, geographic redundancy, and recovery procedures..." required></textarea>
           </div>
         </div>
       </form>

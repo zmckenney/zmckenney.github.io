@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.3 Implementation Timeline - GovProcure RFP Portal</title>
+  <title>2.3 Implementation Approach - Meridian RFP Portal</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body data-page-id="implementation-timeline" data-depth="2">
@@ -12,7 +12,7 @@
     <div class="header-left">
       <a href="../../index.html" class="header-logo">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        GovProcure
+        Meridian RFP Portal
       </a>
       <div class="header-divider"></div>
       <div class="header-rfp-info">
@@ -21,7 +21,10 @@
       </div>
     </div>
     <div class="header-right">
-      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+      <div class="header-user">
+        <span>Zac McKenney</span>
+        <div class="header-avatar">ZM</div>
+      </div>
     </div>
   </header>
 
@@ -33,7 +36,7 @@
         <strong>Submission Deadline</strong>
         <div class="sidebar-deadline">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
-          <span>March 31, 2026 — 5:00 PM EST</span>
+          <span>July 22, 2026 — 5:00 PM EST</span>
         </div>
       </div>
     </aside>
@@ -43,166 +46,101 @@
       <div class="progress-bar" id="progress-bar"></div>
 
       <div class="page-header">
-        <h1>2.3 Implementation Timeline</h1>
-        <p>Provide a detailed implementation schedule including milestones, phases, and resource allocation.</p>
+        <h1>2.3 Implementation Approach</h1>
+        <p>Describe how you'll stand the platform up for Meridian — proposed dates, project leadership, phased milestones, risk mitigation, and training rollout.</p>
       </div>
 
       <form id="page-form" novalidate>
-        <!-- Q1: Project Duration -->
+        <!-- Q1: Dates & PM -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.3.1</span>
-            <span class="question-title">Project Duration</span>
+            <span class="question-title">Proposed Timeline</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Specify the projected start date, end date, and total duration for the full implementation.</p>
+          <p class="question-help">Provide the proposed kickoff date, go-live date, and the name of the project manager who would own the engagement.</p>
           <div class="form-row form-row--3">
             <div class="form-group">
-              <label class="form-label" for="project-start">Projected Start Date</label>
-              <input type="date" id="project-start" name="project_start" class="form-input" required>
+              <label class="form-label" for="kickoff-date">Proposed Kickoff Date</label>
+              <input type="date" id="kickoff-date" name="kickoff_date" class="form-input">
             </div>
             <div class="form-group">
-              <label class="form-label" for="project-end">Projected End Date</label>
-              <input type="date" id="project-end" name="project_end" class="form-input" required>
+              <label class="form-label" for="go-live-date">Proposed Go-Live Date</label>
+              <input type="date" id="go-live-date" name="go_live_date" class="form-input">
             </div>
             <div class="form-group">
-              <label class="form-label" for="project-duration">Total Duration (months)</label>
-              <input type="number" id="project-duration" name="project_duration" class="form-input" placeholder="Auto-calculated" readonly>
+              <label class="form-label" for="pm-name">Project Manager Name</label>
+              <input type="text" id="pm-name" name="pm_name" class="form-input" placeholder="e.g., Priya Balasubramanian">
             </div>
           </div>
         </div>
 
-        <!-- Q2: Phase Breakdown Table -->
+        <!-- Q2: Implementation Phases -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.3.2</span>
-            <span class="question-title">Phase Breakdown</span>
+            <span class="question-title">Implementation Phases &amp; Milestones</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Define the major implementation phases with start/end dates and allocated resources.</p>
-          <table class="form-table">
-            <thead>
-              <tr>
-                <th>Phase</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>FTEs</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" class="form-input" name="phase1_name" placeholder="e.g., Discovery & Planning" value="Discovery & Planning"></td>
-                <td><input type="date" class="form-input" name="phase1_start"></td>
-                <td><input type="date" class="form-input" name="phase1_end"></td>
-                <td><input type="number" class="form-input" name="phase1_ftes" min="1" placeholder="0"></td>
-              </tr>
-              <tr>
-                <td><input type="text" class="form-input" name="phase2_name" placeholder="e.g., Development Sprint 1" value="Development Sprint 1"></td>
-                <td><input type="date" class="form-input" name="phase2_start"></td>
-                <td><input type="date" class="form-input" name="phase2_end"></td>
-                <td><input type="number" class="form-input" name="phase2_ftes" min="1" placeholder="0"></td>
-              </tr>
-              <tr>
-                <td><input type="text" class="form-input" name="phase3_name" placeholder="e.g., Development Sprint 2" value="Development Sprint 2"></td>
-                <td><input type="date" class="form-input" name="phase3_start"></td>
-                <td><input type="date" class="form-input" name="phase3_end"></td>
-                <td><input type="number" class="form-input" name="phase3_ftes" min="1" placeholder="0"></td>
-              </tr>
-              <tr>
-                <td><input type="text" class="form-input" name="phase4_name" placeholder="e.g., UAT & QA" value="UAT & Quality Assurance"></td>
-                <td><input type="date" class="form-input" name="phase4_start"></td>
-                <td><input type="date" class="form-input" name="phase4_end"></td>
-                <td><input type="number" class="form-input" name="phase4_ftes" min="1" placeholder="0"></td>
-              </tr>
-              <tr>
-                <td><input type="text" class="form-input" name="phase5_name" placeholder="e.g., Deployment & Go-Live" value="Deployment & Go-Live"></td>
-                <td><input type="date" class="form-input" name="phase5_start"></td>
-                <td><input type="date" class="form-input" name="phase5_end"></td>
-                <td><input type="number" class="form-input" name="phase5_ftes" min="1" placeholder="0"></td>
-              </tr>
-            </tbody>
-          </table>
+          <p class="question-help">Describe your implementation phases, major milestones, and key deliverables. Use a numbered list to make the phasing easy to follow. Formatting is supported.</p>
+          <div class="form-group">
+            <label class="form-label">Phases &amp; Milestones</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe discovery, build, pilot, and expansion phases with major milestones..." id="phases-milestones" role="textbox" aria-label="Implementation Phases and Milestones"></div>
+            </div>
+          </div>
         </div>
 
-        <!-- Q3: Key Milestones -->
+        <!-- Q3: Risk & Mitigation Plan -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.3.3</span>
-            <span class="question-title">Key Milestones</span>
+            <span class="question-title">Risk &amp; Mitigation Plan</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">List the top 5 critical milestones and their target delivery dates.</p>
-          <table class="form-table">
-            <thead>
-              <tr>
-                <th>Milestone</th>
-                <th>Target Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" class="form-input" name="milestone1_name" placeholder="e.g., Requirements Sign-off"></td>
-                <td><input type="date" class="form-input" name="milestone1_date"></td>
-              </tr>
-              <tr>
-                <td><input type="text" class="form-input" name="milestone2_name" placeholder="e.g., Architecture Review"></td>
-                <td><input type="date" class="form-input" name="milestone2_date"></td>
-              </tr>
-              <tr>
-                <td><input type="text" class="form-input" name="milestone3_name" placeholder="e.g., Beta Release"></td>
-                <td><input type="date" class="form-input" name="milestone3_date"></td>
-              </tr>
-              <tr>
-                <td><input type="text" class="form-input" name="milestone4_name" placeholder="e.g., Security Assessment Complete"></td>
-                <td><input type="date" class="form-input" name="milestone4_date"></td>
-              </tr>
-              <tr>
-                <td><input type="text" class="form-input" name="milestone5_name" placeholder="e.g., Production Go-Live"></td>
-                <td><input type="date" class="form-input" name="milestone5_date"></td>
-              </tr>
-            </tbody>
-          </table>
+          <p class="question-help">Identify the top risks to a successful rollout (clinical adoption, integration complexity, data migration, compliance) and the mitigations you'll put in place. Formatting is supported.</p>
+          <div class="form-group">
+            <label class="form-label">Risk &amp; Mitigation</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Identify top risks and the mitigations you'll put in place..." id="risk-mitigation" role="textbox" aria-label="Risk and Mitigation Plan"></div>
+            </div>
+          </div>
         </div>
 
-        <!-- Q4: Risk & Mitigation -->
+        <!-- Q4: Training & Adoption -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.3.4</span>
-            <span class="question-title">Schedule Risks & Mitigation</span>
+            <span class="question-title">Training &amp; Adoption Strategy</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Identify the top schedule risks and your mitigation strategies.</p>
+          <p class="question-help">Describe how you'll train clinicians, care managers, and administrative staff, and how you'll measure and drive sustained adoption post go-live. Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label" for="schedule-risks">Risk Analysis</label>
-            <textarea id="schedule-risks" name="schedule_risks" class="form-textarea" rows="5" placeholder="Identify key schedule risks (e.g., staffing delays, technology dependencies, agency review cycles) and describe specific mitigation strategies for each..." required></textarea>
-          </div>
-        </div>
-
-        <!-- Q5: Team Size -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">2.3.5</span>
-            <span class="question-title">Resource Summary</span>
-            <span class="required-badge">Required</span>
-          </div>
-          <p class="question-help">Provide a summary of the total team resources allocated to this project.</p>
-          <div class="form-row form-row--3">
-            <div class="form-group">
-              <label class="form-label" for="total-ftes">Total FTEs (Peak)</label>
-              <input type="number" id="total-ftes" name="total_ftes" class="form-input" placeholder="e.g., 25" min="1" required>
+            <label class="form-label">Training &amp; Adoption</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe curriculum, delivery model, and adoption measurement..." id="training-adoption" role="textbox" aria-label="Training and Adoption Strategy"></div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="total-hours">Estimated Total Hours</label>
-              <input type="number" id="total-hours" name="total_hours" class="form-input" placeholder="e.g., 40000" min="1" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="key-roles">Key Roles Count</label>
-              <input type="number" id="key-roles" name="key_roles" class="form-input" placeholder="e.g., 8" min="1">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="team-description">Team Structure Description</label>
-            <textarea id="team-description" name="team_description" class="form-textarea" rows="4" placeholder="Describe the team structure, key roles (PM, Architect, Developers, QA, DevOps), and how resources ramp up/down across phases..." required></textarea>
           </div>
         </div>
       </form>
@@ -221,22 +159,5 @@
 
   <script src="../../js/navigation.js"></script>
   <script src="../../js/shared.js"></script>
-  <script>
-    // Auto-calculate project duration
-    const startEl = document.getElementById('project-start');
-    const endEl = document.getElementById('project-end');
-    const durationEl = document.getElementById('project-duration');
-
-    function calcDuration() {
-      if (startEl.value && endEl.value) {
-        const start = new Date(startEl.value);
-        const end = new Date(endEl.value);
-        const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
-        durationEl.value = months > 0 ? months : '';
-      }
-    }
-    startEl.addEventListener('change', calcDuration);
-    endEl.addEventListener('change', calcDuration);
-  </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.2.2.2 Industry Standards - GovProcure RFP Portal</title>
+  <title>2.2.2.2 Accreditation & Industry Standards - Meridian RFP Portal</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body data-page-id="industry-standards" data-depth="2">
@@ -12,7 +12,7 @@
     <div class="header-left">
       <a href="../../index.html" class="header-logo">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#0d9488"/><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        GovProcure
+        Meridian RFP Portal
       </a>
       <div class="header-divider"></div>
       <div class="header-rfp-info">
@@ -21,7 +21,10 @@
       </div>
     </div>
     <div class="header-right">
-      <div class="header-user"><span>Sarah Mitchell</span><div class="header-avatar">SM</div></div>
+      <div class="header-user">
+        <span>Zac McKenney</span>
+        <div class="header-avatar">ZM</div>
+      </div>
     </div>
   </header>
 
@@ -33,7 +36,7 @@
         <strong>Submission Deadline</strong>
         <div class="sidebar-deadline">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm.8-6.8V4a.8.8 0 00-1.6 0v4c0 .22.09.43.25.57l2.4 2.4a.8.8 0 001.13-1.13L8.8 7.6z"/></svg>
-          <span>March 31, 2026 — 5:00 PM EST</span>
+          <span>July 22, 2026 — 5:00 PM EST</span>
         </div>
       </div>
     </aside>
@@ -43,144 +46,78 @@
       <div class="progress-bar" id="progress-bar"></div>
 
       <div class="page-header">
-        <h1>2.2.2.2 Industry Standards</h1>
-        <p>Document your organization's industry certifications and adherence to recognized standards.</p>
+        <h1>2.2.2.2 Accreditation &amp; Industry Standards</h1>
+        <p>Document your primary behavioral-health accreditation and the broader quality management program behind it.</p>
       </div>
 
       <form id="page-form" novalidate>
-        <!-- Q1: ISO Certifications -->
+        <!-- Q1: Accreditation Identifiers -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.2.2.1</span>
-            <span class="question-title">ISO Certifications</span>
+            <span class="question-title">Primary Accreditation</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Select all ISO certifications currently held by your organization.</p>
-          <div class="form-group">
-            <div class="checkbox-group">
-              <label class="checkbox-option">
-                <input type="checkbox" name="iso_certs" value="iso27001">
-                ISO 27001 — Information Security Management
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="iso_certs" value="iso27017">
-                ISO 27017 — Cloud Security
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="iso_certs" value="iso27018">
-                ISO 27018 — PII in Cloud
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="iso_certs" value="iso9001">
-                ISO 9001 — Quality Management
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="iso_certs" value="iso20000">
-                ISO 20000 — IT Service Management
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="iso_certs" value="iso22301">
-                ISO 22301 — Business Continuity
-              </label>
+          <p class="question-help">Identify the accrediting body, the effective date, and your accreditation certificate or identifier.</p>
+          <div class="form-row form-row--3">
+            <div class="form-group">
+              <label class="form-label" for="accred-body">Accrediting Body</label>
+              <input type="text" id="accred-body" name="accred_body" class="form-input" placeholder="e.g., The Joint Commission (BHC)" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="accred-date">Accreditation Date</label>
+              <input type="date" id="accred-date" name="accred_date" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="accred-number">Accreditation Number</label>
+              <input type="text" id="accred-number" name="accred_number" class="form-input" placeholder="e.g., BHC-2024-08421">
             </div>
           </div>
         </div>
 
-        <!-- Q2: SOC Reports -->
+        <!-- Q2: Accreditation Narrative -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.2.2.2</span>
-            <span class="question-title">SOC Audit Reports</span>
+            <span class="question-title">Accreditation Narrative</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Indicate which SOC reports are available for your organization's services.</p>
+          <p class="question-help">Describe the scope of your accreditation, any additional certifications (CARF, COA, NCQA, URAC, HITRUST), and the continuous readiness practices you maintain between surveys. Formatting is supported.</p>
           <div class="form-group">
-            <div class="checkbox-group">
-              <label class="checkbox-option">
-                <input type="checkbox" name="soc_reports" value="soc1-type2">
-                SOC 1 Type II
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="soc_reports" value="soc2-type2">
-                SOC 2 Type II
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="soc_reports" value="soc3">
-                SOC 3
-              </label>
+            <label class="form-label">Accreditation Narrative</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
+              </div>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe scope of accreditation, additional certifications, and continuous readiness..." id="accreditation-narrative" role="textbox" aria-label="Accreditation Narrative"></div>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="soc-audit-date">Most Recent Audit Date</label>
-            <input type="date" id="soc-audit-date" name="soc_audit_date" class="form-input">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="soc-auditor">Audit Firm</label>
-            <input type="text" id="soc-auditor" name="soc_auditor" class="form-input" placeholder="e.g., Deloitte, KPMG, Ernst & Young">
           </div>
         </div>
 
-        <!-- Q3: Penetration Testing -->
+        <!-- Q3: Quality Management Program -->
         <div class="question-card">
           <div class="question-header">
             <span class="question-number">2.2.2.2.3</span>
-            <span class="question-title">Penetration Testing</span>
+            <span class="question-title">Quality Management Program</span>
             <span class="required-badge">Required</span>
           </div>
-          <p class="question-help">Describe your penetration testing program, including frequency and scope.</p>
+          <p class="question-help">Describe your quality management program — governance, performance improvement methodology, KPIs you monitor, and how clinical leadership reviews outcomes. Formatting is supported.</p>
           <div class="form-group">
-            <label class="form-label" for="pentest-frequency">Testing Frequency</label>
-            <select id="pentest-frequency" name="pentest_frequency" class="form-select" required>
-              <option value="">Select frequency...</option>
-              <option value="quarterly">Quarterly</option>
-              <option value="semi-annual">Semi-Annually</option>
-              <option value="annual">Annually</option>
-              <option value="continuous">Continuous (Bug Bounty)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="pentest-description">Penetration Testing Details</label>
-            <textarea id="pentest-description" name="pentest_description" class="form-textarea" rows="4" placeholder="Describe scope (network, application, social engineering), methodology, and how findings are remediated..." required></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="pentest-vendor">Third-Party Testing Vendor</label>
-            <input type="text" id="pentest-vendor" name="pentest_vendor" class="form-input" placeholder="e.g., CrowdStrike, Rapid7, Coalfire">
-          </div>
-        </div>
-
-        <!-- Q4: Certifications Upload -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">2.2.2.2.4</span>
-            <span class="question-title">Certification Documentation</span>
-          </div>
-          <p class="question-help">Upload copies of relevant certifications and audit reports.</p>
-          <div class="form-group">
-            <div class="file-upload">
-              <div class="file-upload-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9,15 12,12 15,15"/></svg>
+            <label class="form-label">Quality Management</label>
+            <div class="rich-editor">
+              <div class="rich-editor-toolbar">
+                <button type="button" class="rich-editor-btn" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" class="rich-editor-btn" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" class="rich-editor-btn" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" class="rich-editor-btn" data-command="insertUnorderedList" title="Bullet List">&#8226;</button>
+                <button type="button" class="rich-editor-btn" data-command="insertOrderedList" title="Numbered List">1.</button>
               </div>
-              <div class="file-upload-text"><span>Click to upload</span> or drag and drop</div>
-              <div class="file-upload-hint">PDF files up to 25MB each. Multiple files accepted.</div>
-              <input type="file" id="cert-docs" name="cert_docs" accept=".pdf" multiple>
+              <div class="rich-editor-content" contenteditable="true" data-placeholder="Describe QM governance, PI methodology, KPIs, and leadership review rhythms..." id="quality-management" role="textbox" aria-label="Quality Management Program"></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Q5: Compliance Roadmap -->
-        <div class="question-card">
-          <div class="question-header">
-            <span class="question-number">2.2.2.2.5</span>
-            <span class="question-title">Compliance Roadmap</span>
-          </div>
-          <p class="question-help">Describe any planned certifications or compliance initiatives for the next 12 months.</p>
-          <div class="form-group">
-            <label class="form-label" for="compliance-roadmap">Future Compliance Plans</label>
-            <textarea id="compliance-roadmap" name="compliance_roadmap" class="form-textarea" rows="4" placeholder="Describe upcoming audits, new certifications being pursued, and timeline for achieving additional compliance milestones..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="compliance-budget">Annual Compliance Budget (USD)</label>
-            <input type="number" id="compliance-budget" name="compliance_budget" class="form-input" placeholder="e.g., 500000" min="0">
           </div>
         </div>
       </form>
